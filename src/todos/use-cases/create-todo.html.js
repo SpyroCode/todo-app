@@ -19,5 +19,8 @@ export const createTodoHtml = (todo) => {
     const liElement = document.createElement('li');
     liElement.innerHTML = html;
     liElement.setAttribute('data-id', id);
+    if (done) {
+        liElement.classList.add('completed');
+    }
     return liElement;
 }
