@@ -1,4 +1,4 @@
-import {Todo} from "../todo/models/todo.model";
+import {Todo} from "../todos/models/todo.model";
 const Filters = {
     All: 'all',
     Completed: 'Completed',
@@ -69,6 +69,12 @@ const setFilter = (newFilter = Filters.All) => {
 const getCurrentFilter = () => {
     return state.filter;
 }
+
+/**
+ *
+ * @param {Filters} filter
+ * @returns {Array<Todo>}
+ */
 
 const getTodos = (filter = Filters.All) => {
     switch (filter) {
